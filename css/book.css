@@ -40,3 +40,103 @@ main {
     border-radius:  40% 24px 24px 40%/8px 8px 8px 8px;
     overflow: auto;
 }
+
+.whisky {
+    height: 100%;
+}
+
+.inkpen {
+    height: 100%;
+    align-self: flex-end;
+}
+
+.desktop {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.input, .selector {
+    width: 100%;
+}
+
+.namesPrices {
+    display: flex;
+    border: 1px solid rebeccapurple;
+    margin: 0;
+    justify-content: space-around;
+
+}
+
+.names {
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+}
+
+.name, .price, .lettre {
+    margin: 0;
+}
+
+.prices {
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+}
+
+.lineTop {
+    border: 1px solid black;
+    margin: 0;  
+}
+
+
+
+@media screen and (min-width: 1201px) {
+    .empty-whisky {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .inkpen {
+        display: none;
+    }
+    .empty-whisky {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .empty-whisky {
+        height: 100%;
+        display: block;
+    }
+    
+    .whisky {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .empty-whisky {
+        display: none;
+    }
+
+    .desktop {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .pages {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 200vw;
+    }
+
+    .page {
+        width: 100%;
+        height: 200vw;
+    }
+}
+
