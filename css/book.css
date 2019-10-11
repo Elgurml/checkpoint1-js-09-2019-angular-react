@@ -26,7 +26,7 @@ main {
 .page {
     height:65vh;
     padding: 3vw;
-    width: 50%;
+    width: 35%;
     background-blend-mode: multiply;
 }
 
@@ -60,27 +60,28 @@ main {
 }
 
 .namesPrices {
-    display: flex;
-    border: 1px solid rebeccapurple;
+    display: grid;
     margin: 0;
-    justify-content: space-around;
-
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
 }
 
-.names {
+.names, .prices {
     flex-direction: column;
     list-style: none;
     margin: 0;
+    height: 70%;
 }
 
-.name, .price, .lettre {
-    margin: 0;
+.name, .price {
+    margin: 5px;
+    text-align: end;
+    font-size: 0.6em;
 }
 
-.prices {
-    flex-direction: column;
-    list-style: none;
+.lettre {
     margin: 0;
+    text-align: center;
 }
 
 .lineTop {
@@ -88,6 +89,9 @@ main {
     margin: 0;  
 }
 
+.borderTop {
+    border-top: 1px solid black;
+}
 
 
 @media screen and (min-width: 1201px) {
@@ -128,7 +132,7 @@ main {
 
 @media screen and (max-width: 800px) {
     .pages {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         width: 100%;
         height: 200vw;
